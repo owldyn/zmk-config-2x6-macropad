@@ -1,3 +1,4 @@
+name: hootpad
 build:
   settings:
     board_root: .

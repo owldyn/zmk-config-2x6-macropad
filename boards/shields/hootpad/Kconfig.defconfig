@@ -1,0 +1,6 @@
+if SHIELD_HOOTPAD
+
+config ZMK_HOOTPAD
+    default "Hootpad"
+
+endif
