@@ -1,6 +1,7 @@
 if SHIELD_HOOTPAD
 
 config ZMK_HOOTPAD
+    string
     default "Hootpad"
 
 endif
