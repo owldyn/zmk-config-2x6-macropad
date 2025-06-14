@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
+#include "hootpad.dtsi"
 / {
-    default_transform: keymap_transform0 {
+    matrix_transform0: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <2>; // Length of the "col-gpios" array
         rows = <6>; // Length of the "row-gpios" array
@@ -13,6 +14,7 @@
             RC(5,0) RC(5,1)
         >;
     };
+};
 / {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
@@ -20,17 +22,17 @@
         wakeup-source;
 
         col-gpios
-            = <&adafruit_kb2040 GPIO_ACTIVE_HIGH>
-            , <&adafruit_kb2040 9 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 8 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&adafruit_kb2040 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&adafruit_kb2040 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&adafruit_kb2040 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&adafruit_kb2040 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&adafruit_kb2040 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&adafruit_kb2040 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 };
