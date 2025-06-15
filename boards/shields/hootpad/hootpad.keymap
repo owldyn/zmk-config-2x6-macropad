@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define TIMEOUT 300
+#define DEFAULT_LAYER 0
+#define LOWER_LAYER 1
 
 / {
     combos {
@@ -34,7 +36,20 @@
                             &kp F17       &kp F18
                             &kp F19       &kp F20
                             &kp F21       &kp F22
-                            &kp F23       &kp F24
+                            &kp F23       &lt LOWER_LAYER F24
+
+            >;
+
+        };
+        lower {
+            display-name = "lower";
+            bindings = <
+                            &trans         &trans
+                            &trans         &trans
+                            &trans         &trans
+                            &sys_reset     &bootloader
+                            &studio_unlock &trans
+                            &trans         &trans
 
             >;
 
